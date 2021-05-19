@@ -9,6 +9,7 @@
 
 .title {
   color: #566472;
+  display: inline-block;
   font-size: 30px;
 }
 
