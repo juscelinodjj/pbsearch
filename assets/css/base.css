@@ -1,0 +1,12 @@
+body {
+  background-color: #ecf0f1;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}

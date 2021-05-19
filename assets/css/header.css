@@ -1,0 +1,55 @@
+.header {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  color: #566472;
+  font-size: 30px;
+}
+
+.wrapper-input {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  padding: 0px 20px;
+  width: 100%;
+}
+
+.input {
+  background-color: transparent;
+  border: 1px solid #808b96;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #566472;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 40px 7px 10px;
+  width: 350px;
+}
+
+@media (max-width: 400px) {
+  .input { width: 95%; }
+}
+
+.input::placeholder {
+  color: #abb3bb;
+  opacity: 1;
+}
+
+.icon-search {
+  color: #808b96;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: -45px;
+  padding: 8px;
+}
+
+.icon-search:hover {
+  color: #566472;
+}
