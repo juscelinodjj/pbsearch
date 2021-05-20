@@ -28,22 +28,22 @@ const getMarkupGridItem = function (book) {
     ? '' : `Capítulos: <span class="bold">${chapters}</span>`;
   const markupGridItem = `
     <section class="col s6 m3 l2">
-      <div class="wrapper-image">
-        <img data-book-id="${idBook}" class="cover" src="${urlCover}"
-          alt="${title}" title="${title}" loading="lazy"
+      <div class="js-waiting-for-image-loading wrapper-image">
+        <img data-book-id="${idBook}" class="js-waiting-for-image-loading cover"
+          src="${urlCover}" alt="${title}" title="${title}" loading="lazy"
           onerror="this.style.color = '#2c3e50'">
       </div>
-      <div class="wrapper-span">
-        <span class="span-info">
+      <div class=" wrapper-span">
+        <span class="js-waiting-for-image-loading span-info">
           Tipo: <span class="bold">${type}</span>
         </span>
-        <span class="span-info">
+        <span class="js-waiting-for-image-loading span-info">
           Formato: <span class="bold">${extension}</span>
         </span>
-        <span class="span-info">
+        <span class="js-waiting-for-image-loading span-info">
           Tamanho: <span class="bold">${size}</span>
         </span>
-        <span class="span-info">
+        <span class="js-waiting-for-image-loading span-info">
           ${markupDuration}
           ${markupChapters}
         </span>
@@ -51,6 +51,28 @@ const getMarkupGridItem = function (book) {
     </section>
   `;
   return markupGridItem;
+};
+
+const showImageAndSpan = function (event) {
+  const image = event.target;
+  image.classList.remove('js-waiting-for-image-loading');
+  const wrapperImage = image.parentElement;
+  wrapperImage.classList.remove('js-waiting-for-image-loading');
+  const thisCol = image.parentElement.parentElement;
+  const spans = thisCol.querySelectorAll('.span-info');
+  for (const span of spans) {
+    span.classList.remove('js-waiting-for-image-loading');
+  }
+};
+
+const imagesObserver = function() {
+  const images = document.querySelectorAll('.cover');
+  for (const image of images) {
+    if (!image.complete) {
+      image.addEventListener('load', showImageAndSpan);
+      image.addEventListener('error', showImageAndSpan);
+    }
+  }
 };
 
 const setGrid = function (array) {
@@ -72,6 +94,7 @@ const setGrid = function (array) {
     break;
   }
   grid.innerHTML = markup;
+  imagesObserver();
   enablePagination();
   enableDownload();
 };
