@@ -68,10 +68,8 @@ const showImageAndSpan = function (event) {
 const imagesObserver = function() {
   const images = document.querySelectorAll('.cover');
   for (const image of images) {
-    if (!image.complete) {
-      image.addEventListener('load', showImageAndSpan);
-      image.addEventListener('error', showImageAndSpan);
-    }
+    image.addEventListener('load', showImageAndSpan);
+    image.addEventListener('error', showImageAndSpan);
   }
 };
 
