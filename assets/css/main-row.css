@@ -122,8 +122,14 @@
   color: #2c3e50;
 }
 
-.span-pagination {
+.select-pagination {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
   color: #2c3e50;
+  cursor: pointer;
   font-size: 15px;
-  margin: 0px 4px;
+  outline: none;
+  text-align-last: center;
 }
