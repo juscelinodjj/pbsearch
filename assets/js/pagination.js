@@ -1,8 +1,9 @@
 'use strict';
 
-const wrapperPagination = document.querySelector('.wrapper-pagination');
-
-const resetPagination = () => wrapperPagination.innerHTML = '';
+const resetPagination = () => {
+  const wrapperPagination = document.querySelector('.wrapper-pagination');
+  wrapperPagination.innerHTML = '';
+};
 
 const getMarkupOption = function () {
   let loop = numberOfPages;
@@ -71,21 +72,22 @@ const navigation = function (event) {
   setGrid(books);
 };
 
-const enablePagination = function () {
+const addPagination = function () {
   const markup = getMarkupPagination();
   if (markup) {
+    const wrapperPagination = document.querySelector('.wrapper-pagination');
     wrapperPagination.innerHTML = markup;
-    const buttonPreviousPage = document.querySelector('.button-previus-page');
-    const selectPagination = document.querySelector('.select-pagination');
-    const buttonNextPage  = document.querySelector('.button-next-page');
-    if (buttonPreviousPage) {
-      buttonPreviousPage.addEventListener('click', navigation);
-    }
-    if (selectPagination) {
-      selectPagination.addEventListener('change', navigationTo);
-    }
-    if (buttonNextPage) {
-      buttonNextPage.addEventListener('click', navigation);
-    }
   }
+};
+
+const enablePagination = function () {
+  addPagination();
+  const buttonPreviousPage = document.querySelector('.button-previus-page');
+  const selectPagination = document.querySelector('.select-pagination');
+  const buttonNextPage  = document.querySelector('.button-next-page');
+  buttonPreviousPage ?
+    buttonPreviousPage.addEventListener('click', navigation) : null;
+  selectPagination ?
+    selectPagination.addEventListener('change', navigationTo) : null;
+  buttonNextPage ? buttonNextPage.addEventListener('click', navigation) : null;
 };
