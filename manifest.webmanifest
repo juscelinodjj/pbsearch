@@ -1,11 +1,11 @@
 {
-  "name": "Polemic Books",
-  "short_name": "Polemic Books",
+  "name": "Polemic Books Search",
+  "short_name": "PB Search",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#3498db",
   "theme_color": "#3498db",
-  "description": "Polemic Books Web",
+  "description": "Polemic Books Search",
   "icons": [
     {
       "src": "assets/img/favicon/android-chrome-192x192.png",
