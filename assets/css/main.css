@@ -1,6 +1,6 @@
 .main {
   box-sizing: border-box;
-  padding: 5px 5px 29px 5px;
+  padding: 20px 5px 29px 5px;
 }
 
 .wrapper-load {
@@ -26,7 +26,7 @@
 }
 
 .span-message {
-  color: #566472;
+  color: var(--color-text-span-message);
   display: inline-block;
   font-size: 16px;
   margin-right: 9px;
@@ -37,20 +37,17 @@
 }
 
 .button-to-top {
-  background-color: #566472;
+  background-color: var(--color-background-button-to-top);
   border: none;
   border-radius: 5px;
   bottom: 10px;
-  color: #ecf0f1;
+  color: var(--color-text-button-to-top);
   cursor: pointer;
   font-size: 14px;
   outline: none;
+  opacity: 0.5;
   padding: 3px;
   position: fixed;
   right: 24px;
   z-index: 99;
-}
-
-@media (max-width: 768px) {
-  .button-to-top { background-color: rgba(44, 62, 80, 0.5); }
 }

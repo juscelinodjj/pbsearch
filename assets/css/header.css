@@ -1,4 +1,6 @@
 .header {
+  background-color: var(--color-background-header);
+  padding-bottom: 15px;
   padding-top: 30px;
   text-align: center;
 }
@@ -8,7 +10,7 @@
 }
 
 .title {
-  color: #566472;
+  color: var(--color-text-title);
   display: inline-block;
   font-size: 30px;
 }
@@ -22,14 +24,15 @@
 }
 
 .input {
-  background-color: transparent;
-  border: 1px solid #808b96;
+  background-color: var(--color-background-input);
+  border: none;
   border-radius: 3px;
   box-sizing: border-box;
-  color: #566472;
+  color: var(--color-text-input);
   font-family: inherit;
   font-size: 16px;
   font-weight: bold;
+  outline-style: none;
   padding: 7px 40px 7px 10px;
   width: 350px;
 }
@@ -39,18 +42,14 @@
 }
 
 .input::placeholder {
-  color: #abb3bb;
+  color: var(--color-text-input);
   opacity: 1;
 }
 
 .icon-search {
-  color: #808b96;
+  color: var(--color-text-input);
   cursor: pointer;
   font-size: 16px;
   margin-left: -45px;
   padding: 8px;
-}
-
-.icon-search:hover {
-  color: #566472;
 }

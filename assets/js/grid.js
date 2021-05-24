@@ -29,7 +29,8 @@ const getMarkupGridItem = function (book) {
   const markupGridItem = `
     <section class="col s6 m3 l2">
       <div class="js-waiting-for-image-loading wrapper-image">
-        <img data-book-id="${idBook}" class="js-waiting-for-image-loading cover"
+        <img data-book-id="${idBook}"
+          class="js-waiting-for-image-loading card cover"
           src="${urlCover}" alt="${title}" title="${title}" loading="lazy"
           onerror="this.style.color = '#2c3e50'">
       </div>

@@ -15,8 +15,8 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #808b96;
-  color: #808b96;
+  background-color: var(--dots-primary-color);
+  color: var(--dots-primary-color);
   animation: dotFlashing 1s infinite linear alternate;
   animation-delay: .5s;
 }
@@ -34,8 +34,8 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #808b96;
-  color: #808b96;
+  background-color: var(--dots-primary-color);
+  color: var(--dots-primary-color);
   animation: dotFlashing 1s infinite alternate;
   animation-delay: 0s;
 }
@@ -45,18 +45,18 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #808b96;
-  color: #808b96;
+  background-color: var(--dots-primary-color);
+  color: var(--dots-primary-color);
   animation: dotFlashing 1s infinite alternate;
   animation-delay: 1s;
 }
 
 @keyframes dotFlashing {
   0% {
-    background-color: #808b96;
+    background-color: var(--dots-primary-color);
   }
   50%,
   100% {
-    background-color: #e5e7ea;
+    background-color: var(--dots-secundary-color);
   }
 }
