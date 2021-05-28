@@ -15,13 +15,7 @@ const resetGrid = function () {
 
 const getMarkupGridItem = function (book) {
   const urlCover = 'https://plmcbks.amanoteam.com/view/' + book['idCover'];
-  const {type} = book;
-  const {extension} = book;
-  const {size} = book;
-  const {duration} = book;
-  const {chapters} = book;
-  const {title} = book;
-  const {idBook} = book;
+  const {type, extension, size, duration, chapters, title, idBook} = book;
   const markupDuration = !duration
     ? '' : `Duração: <span class="bold">${duration}</span>`;
   const markupChapters = !chapters
