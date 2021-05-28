@@ -1,56 +1,33 @@
 .header {
   background-color: var(--color-background-header);
-  padding-bottom: 15px;
-  padding-top: 30px;
-}
-
-@media (min-width: 769px) {
-  .header {
-    height: 35px;
-    padding-top: 5px;
-  }
+  height: 45px;
 }
 
 .wrapper-header {
-  margin-left: auto;
-  margin-right: auto;
+  height: 45px;
+  margin: 0 auto;
   max-width: 1100px;
   text-align: center;
 }
 
-.link {
+.title {
+  float: left;
+  font-size: 24px;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+.title .link {
+  color: var(--color-text-title);
+  outline-style: none;
   text-decoration: none;
 }
 
-.title {
-  color: var(--color-text-title);
-  display: inline-block;
-  font-size: 24px;
-}
-
-@media (min-width: 769px) {
-  .title {
-    float: left;
-    margin-left: 8px;
-    margin-top: 10px;
-  }
-}
-
 .wrapper-input {
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  margin-right: -16px;
-  margin-top: 20px;
-  padding: 0px 20px;
-  width: 100%;
-}
-
-@media (min-width: 769px) {
-  .wrapper-input {
-    float: right;
-    margin-top: 5px;
-    width: 400px;
-  }
+  float: right;
+  margin-right: 8px;
+  margin-top: 7px;
+  width: 320px;
 }
 
 .input {
@@ -60,15 +37,10 @@
   box-sizing: border-box;
   color: var(--color-text-input);
   font-family: inherit;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 15px;
   outline-style: none;
-  padding: 7px 40px 7px 10px;
-  width: 350px;
-}
-
-@media (max-width: 400px) {
-  .input { width: 95%; }
+  padding: 6px 40px 6px 10px;
+  width: 100%;
 }
 
 .input::placeholder {
@@ -81,5 +53,48 @@
   cursor: pointer;
   font-size: 16px;
   margin-left: -45px;
-  padding: 8px;
+  padding: 4px 8px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    margin-left: 12px;
+  }
+  .wrapper-input {
+    margin-right: 14px;
+  }
+}
+
+@media (max-width: 602px) {
+  .header {
+    height: auto;
+  }
+  .wrapper-header {
+    height: auto;
+    padding-bottom: 12px;
+  }
+  .title {
+    display: inline-block;
+    float: none;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .wrapper-input {
+    float: none;
+    margin: 20px auto 0 auto;
+    width: 320px;
+  }
+  .input {
+    padding-bottom: 4px;
+    width: 98%;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper-input {
+    width: 290px;
+  }
+  .input {
+    font-size: 14px;
+  }
 }
