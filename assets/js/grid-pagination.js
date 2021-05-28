@@ -24,36 +24,18 @@ const getMarkupPagination = function () {
     return '';
   }
   const markupOption = getMarkupOption();
-  if (currentPage === 1) {
-    return `
-      <select class="select-pagination" title="Página específica">
-        ${markupOption}
-      </select>
-      <a class="button-next-page" title="Página seguinte">
-        <i class="icon-angle-double-right"></i>
-      </a>
-    `;
-  }
-  if (currentPage === numberOfPages) {
-    return `
-      <a class="button-previus-page" title="Página anterior">
-        <i class="icon-angle-double-left"></i>
-      </a>
-      <select class="select-pagination" title="Página específica">
-        ${markupOption}
-      </select>
-    `;
-  }
+  const disableButtonLeft = currentPage === 1 ? 'disabled' : '';
+  const disableButtonRight = currentPage === numberOfPages? 'disabled' : '';
   return `
-    <a class="button-previus-page" title="Página anterior">
+    <button class="button-previus-page" ${disableButtonLeft} title="Página anterior">
       <i class="icon-angle-double-left"></i>
-    </a>
+    </button>
     <select class="select-pagination" title="Página específica">
       ${markupOption}
     </select>
-    <a class="button-next-page" title="Página seguinte">
+    <button class="button-next-page" ${disableButtonRight} title="Página seguinte">
       <i class="icon-angle-double-right"></i>
-    </a>
+    </button>
   `;
 };
 
@@ -65,7 +47,7 @@ const navigationTo = function (event) {
 };
 
 const navigation = function (event) {
-  const buttonPressed = event.target.parentElement;
+  const buttonPressed = event.currentTarget;
   buttonPressed.classList.contains('button-next-page')
     ? currentPage ++ : currentPage --;
   scrollToTop();

@@ -77,9 +77,17 @@
 .button-previus-page,
 .button-next-page {
   background-color: transparent;
+  border: none;
   color: var(--color-text-pagination);
   cursor: pointer;
   font-size: 18px;
+  outline-style: none;
+}
+
+.button-previus-page:disabled,
+.button-next-page:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .select-pagination {
