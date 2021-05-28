@@ -1,17 +1,17 @@
 :root {
   --color-background-body: #ecf0f1;
-  --color-background-header: #3498db;
-  --color-background-input: #70b6e5;
+  --color-background-header: #2980b9;
+  --color-background-input: #69a6ce;
   --color-background-button-to-top: #566472;
   --color-background-span-info: #e3e3e3;
   --color-text-title: #ecf0f1;
-  --color-text-input: #eff3f3;
-  --color-text-span-message: #3498db;
+  --color-text-input: #fff;
+  --color-text-span-message: #2980b9;
   --color-text-button-to-top: #ecf0f1;
   --color-text-span-info: #34495e;
   --color-text-pagination: #2980b9;
   --load-linear-gradient: linear-gradient(to right, #e3e3e3 4%, #eeeeee 25%, #e3e3e3 36%);
-  --dots-primary-color: #3498db;
+  --dots-primary-color: #2980b9;
   --dots-secundary-color: #e5e7ea;
 }
 
