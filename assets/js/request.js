@@ -34,17 +34,16 @@ const parseRequest = function (status, object) {
   const documents = object['results']['items'];
   const books = documents.filter(book => book['documents'][0])
     .map(book => {
+      const title = book['title'];
+      const type = book['type'] ? book['type']['name'] : 'N/A';
+      const idCover = book['id'];
+      const idBook = book['documents'][0]['id'];
       const size = bytesToSize(book['documents'][0]['file_size']);
+      const extension = book['documents'][0]['file_extension'];
       const duration = parseDuration(book['duration']);
+      const chapters = book['chapters'];
       return {
-        'title': book['title'],
-        'type': book['type']['name'],
-        'idCover': book['id'],
-        'idBook': book['documents'][0]['id'],
-        'size': size,
-        'extension': book['documents'][0]['file_extension'],
-        'duration': duration,
-        'chapters': book['chapters']
+        title, type, idCover, idBook, size, extension, duration, chapters
       };
     })
     .sort((a, b) => {
