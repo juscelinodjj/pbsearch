@@ -23,6 +23,30 @@
   text-decoration: none;
 }
 
+.wrapper-buttons {
+  box-sizing: border-box;
+  height: 45px;
+  overflow: auto;
+  padding-right: 16px;
+  padding-top: 9px;
+  text-align: right;
+}
+
+.button-theme, .button-filter {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: var(--color-text-buttons);
+  cursor: pointer;
+  font-size: 18px;
+  outline-style: none;
+  padding: 4px 6px;
+}
+
+.button-theme:hover, .button-filter:hover {
+  background-color: var(--color-background-buttons);
+}
+
 .wrapper-input {
   float: right;
   margin-right: 8px;
@@ -60,6 +84,9 @@
   .title {
     margin-left: 12px;
   }
+  .button-theme:hover, .button-filter:hover {
+    background-color: transparent;
+  }
   .wrapper-input {
     margin-right: 14px;
   }
@@ -71,13 +98,21 @@
   }
   .wrapper-header {
     height: auto;
-    padding-bottom: 12px;
+    padding-bottom: 6px;
   }
   .title {
     display: inline-block;
     float: none;
     margin-left: 0;
     margin-top: 20px;
+  }
+  .wrapper-buttons {
+    height: auto;
+    margin-top: 6px;
+    padding-top: 0;
+  }
+  .button-theme, .button-filter {
+    font-size: 16px;
   }
   .wrapper-input {
     float: none;

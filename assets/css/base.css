@@ -1,10 +1,12 @@
 :root {
   --color-background-body: #ecf0f1;
   --color-background-header: #2980b9;
+  --color-background-buttons: #3e8cc0;
   --color-background-input: #69a6ce;
   --color-background-button-to-top: #566472;
   --color-background-span-info: #e3e3e3;
   --color-text-title: #ecf0f1;
+  --color-text-buttons: #fff;
   --color-text-input: #fff;
   --color-text-span-message: #2980b9;
   --color-text-button-to-top: #ecf0f1;
