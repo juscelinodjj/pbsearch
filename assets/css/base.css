@@ -1,4 +1,4 @@
-:root {
+[data-theme="light"] {
   --color-background-body: #ecf0f1;
   --color-background-header: #2980b9;
   --color-background-buttons: #3e8cc0;
@@ -15,6 +15,25 @@
   --load-linear-gradient: linear-gradient(to right, #e3e3e3 4%, #eeeeee 25%, #e3e3e3 36%);
   --dots-primary-color: #2980b9;
   --dots-secundary-color: #e5e7ea;
+}
+
+[data-theme="dark"] {
+  --color-background-body: #121212;
+  --color-background-header: #1f1f1f;
+  --color-background-buttons: #353535;
+  --color-background-input: #353535;
+  --color-background-button-to-top: #353535;
+  --color-background-span-info: #353535;
+  --color-text-title: #cfcfcf;
+  --color-text-buttons: #cfcfcf;
+  --color-text-input: #cfcfcf;
+  --color-text-span-message: #d2d2d2;
+  --color-text-button-to-top: #acacac;
+  --color-text-span-info: #cccccc;
+  --color-text-pagination: #a0a0a0;
+  --load-linear-gradient: linear-gradient(to right, #353535 4%, #494949 25%, #353535 36%);
+  --dots-primary-color: #808080;
+  --dots-secundary-color: #353535;
 }
 
 body {
