@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello/fontello.woff?3860946') format('woff');
+  src: url('../font/fontello/fontello.woff?52724894') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -54,3 +54,6 @@
 .icon-arrow-up:before { content: '\e801'; } /* '' */
 .icon-angle-double-left:before { content: '\f100'; } /* '' */
 .icon-angle-double-right:before { content: '\f101'; } /* '' */
+.icon-sun:before { content: '\f185'; } /* '' */
+.icon-moon:before { content: '\f186'; } /* '' */
+.icon-sliders:before { content: '\f1de'; } /* '' */
