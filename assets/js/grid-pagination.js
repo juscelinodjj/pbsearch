@@ -20,7 +20,8 @@ const getMarkupOption = function () {
 };
 
 const getMarkupPagination = function () {
-  if (books.length <= amountBookPerPage) {
+  const filtedBooks = filterBooksByType(books);
+  if (filtedBooks.length <= amountBookPerPage) {
     return '';
   }
   const markupOption = getMarkupOption();
@@ -56,10 +57,8 @@ const navigation = function (event) {
 
 const addPagination = function () {
   const markup = getMarkupPagination();
-  if (markup) {
-    const wrapperPagination = document.querySelector('.wrapper-pagination');
-    wrapperPagination.innerHTML = markup;
-  }
+  const wrapperPagination = document.querySelector('.wrapper-pagination');
+  wrapperPagination.innerHTML = markup;
 };
 
 const enablePagination = function () {

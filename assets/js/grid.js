@@ -68,16 +68,34 @@ const imagesObserver = function() {
   }
 };
 
-const setGrid = function (array) {
+const filterBooksByType = function () {
+  const inputsRadio = document.querySelectorAll('.input-radio');
+  const type = Array.from(inputsRadio)
+    .filter(element => element.checked)[0].value;
+  if (type === 'Todos') {
+    return books;
+  }
+  return books.filter(book => book['type'] === type);
+};
+
+const setGrid = function () {
   if (!books.length) {
-    books = array;
-    numberOfPages = Math.ceil(books.length / amountBookPerPage);
+    return;
+  }
+  const filtedBooks = filterBooksByType(books);
+  numberOfPages = Math.ceil(filtedBooks.length / amountBookPerPage);
+  showMessage(`Resultados encontrados:<span class="bold"> ${filtedBooks.length}`
+    +'</span>');
+  if (!numberOfPages) {
+    grid.innerHTML = '';
+    enablePagination();
+    return;
   }
   let loop = amountBookPerPage;
   let bookIndex = currentPage * amountBookPerPage - amountBookPerPage;
   let markup = '';
   while (loop) {
-    const currentBook = books[bookIndex];
+    const currentBook = filtedBooks[bookIndex];
     if (currentBook) {
       markup += getMarkupGridItem(currentBook);
       bookIndex ++;

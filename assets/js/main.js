@@ -47,10 +47,8 @@ const handleSearch = function (response) {
     return;
   }
   if (status === 200) {
-    const books = response['books'];
-    showMessage(`Resultados encontrados:<span class="bold"> ${books.length}
-      </span>`);
-    setGrid(books);
+    books = response['books'];
+    setGrid();
   }
   searching = false;
 };
