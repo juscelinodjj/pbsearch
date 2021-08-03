@@ -22,85 +22,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/fontello.css">
-    <link rel="stylesheet" href="assets/css/dots.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/main-row.css">
+    <style>
+      body {
+        font-family: 'Varela Round', sans-serif;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 0 40px;
+      }
+      .span-link {
+        color: cornflowerblue;
+      }
+    </style>
   </head>
   <body>
-    <header class="card header">
-      <section class="wrapper-header">
-        <h1 class="title">
-          <a class="link" tabindex="-1" href="https://github.com/juscelinodjj/pbsearch"
-            rel="noopener" target="_blank"
-            title="Visitar a página desse projeto no Github">
-            Polemic Books Search
-          </a>
-        </h1>
-        <div class="wrapper-input">
-          <input class="input" type="text" autocomplete="off"
-            placeholder="Procure por título, autor ou editora">
-          <i class="icon-search" title="Pesquisar"></i>
-        </div>
-        <div class="wrapper-buttons">
-          <button class="button-theme" title="Mudar tema">
-            <i></i>
-          </button>
-          <button class="button-filter" title="Filtrar pesquisa">
-            <i class="icon-sliders"></i>
-          </button>
-          <div class="card dropdown-content js-dropdown-content">
-            <div class="wrapper-input-radio">
-              <label class="label-radio">
-                <input class="input-radio" type="radio" name="type" value="Todos" checked> Todos
-              </label>
-            </div>
-            <div class="wrapper-input-radio">
-              <label class="label-radio">
-                <input class="input-radio" type="radio" name="type" value="Audiobook"> Audiobook
-              </label>
-            </div>
-            <div class="wrapper-input-radio">
-              <label class="label-radio">
-                <input class="input-radio" type="radio" name="type" value="Comic"> Comic
-              </label>
-            </div>
-            <div class="wrapper-input-radio">
-              <label class="label-radio">
-                <input class="input-radio" type="radio" name="type" value="Ebook"> Ebook
-              </label>
-            </div>
-            <div class="wrapper-input-radio">
-              <label class="label-radio">
-                <input class="input-radio" type="radio" name="type" value="Manga/Novel"> Manga/Novel
-              </label>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-    <main class="main">
-      <div class="hide wrapper-load">
-        <div class="dot-flashing load"></div>
-      </div>
-      <div class="wrapper-message">
-        <span class="span-message">
-        </span>
-      </div>
-      <section class="grid row"></section>
-      <div class="wrapper-pagination"></div>
-      <button class="hide button-to-top" title="Ir para o topo">
-        <i class="icon-arrow-up"></i>
-      </button>
-    </main>
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/filter.js"></script>
-    <script src="assets/js/request.js"></script>
-    <script src="assets/js/grid.js"></script>
-    <script src="assets/js/grid-pagination.js"></script>
-    <script src="assets/js/download.js"></script>
-    <script src="assets/js/main.js"></script>
+    <h1>A API encontra-se indisponível no momento, continue pelo Telegram
+      <a href="https://t.me/PolemicBooks">Polemic Books</a>.</h1>
+    <p>
+      Caso tenha um Kindle, acesse <span class="span-link">https://klivros.netlify.app</span>
+      pelo navegador experimental do Kindle.
+    </p>
   </body>
 </html>
